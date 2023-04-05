@@ -13,9 +13,9 @@ public class ReadExcel {
 		String d=e.readData(1, 1);
 		System.out.println(d);
 		String f=e.readData(2, 0);
-		System.out.println(c);
+		System.out.println(f);
 		String g=e.readData(2, 1);
-		System.out.println(d);
+		System.out.println(g);
 	}
 
 }
