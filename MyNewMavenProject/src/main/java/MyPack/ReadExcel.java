@@ -4,18 +4,14 @@ import java.io.IOException;
 public class ReadExcel {
 	public static void main(String[] args) throws IOException {
 		Excel e=new Excel();
-		String a=e.readData(0, 0);
-		System.out.println(a);
-		String b=e.readData(0, 1);
-		System.out.println(b);
-		String c=e.readData(1, 0);
-		System.out.println(c);
-		String d=e.readData(1, 1);
-		System.out.println(d);
-		String f=e.readData(2, 0);
-		System.out.println(f);
-		String g=e.readData(2, 1);
-		System.out.println(g);
+		System.out.println("The Excel Sheet Data are:");
+		for(int i=0;i<=2;i++) {
+			for(int j=0;j<=1;j++) {
+				System.out.print(e.readData(i, j)+"\t");
+			}
+			System.out.print("\n");
+		}
+		
 	}
 
 }
