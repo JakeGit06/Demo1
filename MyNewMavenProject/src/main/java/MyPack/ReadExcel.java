@@ -12,6 +12,10 @@ public class ReadExcel {
 		System.out.println(c);
 		String d=e.readData(1, 1);
 		System.out.println(d);
+		String f=e.readData(2, 0);
+		System.out.println(c);
+		String g=e.readData(2, 1);
+		System.out.println(d);
 	}
 
 }
