@@ -29,7 +29,7 @@ public class ExcelUtility {
 	}
 
 	public ExcelUtility(String filename) throws IOException {
-		String filePath = "..\\demo_tours\\src\\test\\resources\\testdata\\" + filename;
+		String filePath = "..\\7Mart\\src\\test\\resources\\testdata\\" + filename;
 		FileInputStream f = new FileInputStream(filePath);
 		XSSFWorkbook w = new XSSFWorkbook(f);
 		sh = w.getSheet("Sheet1");

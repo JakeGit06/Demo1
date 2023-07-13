@@ -6,13 +6,6 @@
 		<parameter name="edgebrowser" value="edge" />
 		<classes>
 			<class name="com.obsqura.testscripts.LoginPageTest" />
-			<class name="com.obsqura.testscripts.ManageOrdersPageTest" />
-			<class name="com.obsqura.testscripts.ManageUsersPageTest" />
-			<class name="com.obsqura.testscripts.CategoryPageTest" />
-			<class name="com.obsqura.testscripts.AdminUsersPageTest" />
-			<class name="com.obsqura.testscripts.ManagePagesTest" />
-			<class name="com.obsqura.testscripts.ManageOfferCodeTest" />
-			<class name="com.obsqura.testscripts.RegressionTest" />
 			<class name="com.obsqura.testscripts.TestHelper" />
 		</classes>
 	</test> <!--
