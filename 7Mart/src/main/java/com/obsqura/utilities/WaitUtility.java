@@ -16,8 +16,7 @@ public class WaitUtility {
 
 	public void EW_visibilityOfElement(By path, WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(path));	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(path));
 	}
-	
-	
+
 }

@@ -10,12 +10,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.obsqura.utilities.*;
-public class TestHelper{
+
+public class TestHelper {
 	WebDriver driver;
 
 	@BeforeMethod
 	@Parameters("chromebrowser")
-	public void browserLaunching(@Optional("chrome")String browser) {
+	public void browserLaunching(@Optional("chrome") String browser) {
 		FileReaderUtility fr = new FileReaderUtility();
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", fr.getChromeDriverPath());
@@ -34,23 +35,21 @@ public class TestHelper{
 	}
 
 	@AfterMethod
-	public void browserClosing(ITestResult result)throws IOException{
-		/*if(ITestResult.FAILURE==result.getStatus()){
-			try{
-				
-			TakesScreenshot screenshot=(TakesScreenshot)driver;
-				
-			File src=screenshot.getScreenshotAs(OutputType.FILE);
-		
-			FileUtils.copyFile(src,new File("C:\\screenshots"+result.getName()+".png"));
-			
-			   System.out.println("Successfully captured a screenshot");
-			}catch (Exception e){
-			    System.out.println("Exception while taking screenshot "+e.getMessage());
-			}
-           }*/
+	public void browserClosing(ITestResult result) throws IOException {
+		/*
+		 * if(ITestResult.FAILURE==result.getStatus()){ try{
+		 * 
+		 * TakesScreenshot screenshot=(TakesScreenshot)driver;
+		 * 
+		 * File src=screenshot.getScreenshotAs(OutputType.FILE);
+		 * 
+		 * FileUtils.copyFile(src,new File("C:\\screenshots"+result.getName()+".png"));
+		 * 
+		 * System.out.println("Successfully captured a screenshot"); }catch (Exception
+		 * e){ System.out.println("Exception while taking screenshot "+e.getMessage());
+		 * } }
+		 */
 
 		driver.quit();
 	}
 }
-

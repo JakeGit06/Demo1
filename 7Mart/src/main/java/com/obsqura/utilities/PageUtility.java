@@ -86,12 +86,6 @@ public class PageUtility {
 		return (driver.findElement(By.xpath(xpath)));
 	}
 
-	public WebElement get_OfferEditXpath(String Offer_Code, WebDriver driver) {
-		String xpath = getXpathOfTable("Offer Code", Offer_Code, "Action", driver);
-		xpath = xpath + "/a[1]";
-		return (driver.findElement(By.xpath(xpath)));
-	}
-
 	public String getXpathOfTable(String col1, String col1_value, String col2, WebDriver driver) {
 		int i = 1, col, row;
 		List<WebElement> colnames1 = driver.findElements(By.xpath("//table/thead/tr/th"));

@@ -106,12 +106,6 @@ public class HomePage extends PageUtility {
 		lcp.clickReset();
 	}
 
-	public void manageOffers_ImageChange(String Offer_Code,String imgPath) {
-		clickManageOffersCode();
-		ManageOffersCodepage moc = new ManageOffersCodepage(driver);
-		moc.imageChange(Offer_Code,imgPath);
-	}
-
 	public void clickManageOffersCode() {
 		manageOffersCode.click();
 	}
