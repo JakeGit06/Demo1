@@ -50,14 +50,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.owasp/java-file-io -->
-
-		<dependency>
-			<groupId>Maven_Trial</groupId>
-			<artifactId>Maven_Trial</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
