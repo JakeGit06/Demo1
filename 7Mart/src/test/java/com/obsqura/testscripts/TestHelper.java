@@ -4,12 +4,15 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.obsqura.utilities.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestHelper {
 	WebDriver driver;
@@ -19,11 +22,18 @@ public class TestHelper {
 	public void browserLaunching(@Optional("chrome") String browser) {
 		FileReaderUtility fr = new FileReaderUtility();
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", fr.getChromeDriverPath());
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", fr.getChromeDriverPath());
 			driver = new ChromeDriver();
-		} else if (browser.equalsIgnoreCase("edge")) {
+		} 
+		else if (browser.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver", fr.getEdgeDriverPath());
 			driver = new EdgeDriver();
+		}
+		else if(browser.equalsIgnoreCase("firefox")) {
+			System.out.println("hello");
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		}
 		driver.navigate().to(fr.getApplicationUrl());
 		driver.manage().window().maximize();

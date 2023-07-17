@@ -4,9 +4,17 @@
 	<test thread-count="5" name="Test">
 		<parameter name="chromebrowser" value="chrome" />
 		<parameter name="edgebrowser" value="edge" />
+		<parameter name="firefoxbrowser" value="firefox" />
 		<classes>
+
 			<class name="com.obsqura.testscripts.LoginPageTest" />
+			<class name="com.obsqura.testscripts.ManageOrdersPageTest" />
+			<class name="com.obsqura.testscripts.ManageUsersPageTest" />
+			<class name="com.obsqura.testscripts.CategoryPageTest" />
+			<class name="com.obsqura.testscripts.AdminUsersPageTest" />
+			<class name="com.obsqura.testscripts.ManagePagesTest" />
 			<class name="com.obsqura.testscripts.TestHelper" />
+
 		</classes>
 	</test> <!--
 	Test -->
