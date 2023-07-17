@@ -57,8 +57,8 @@ public class TestHelper {
 			TakesScreenshot screenshot=(TakesScreenshot)driver;
 				
 			File src=screenshot.getScreenshotAs(OutputType.FILE);
-		
-			FileUtils.copyFile(src,new File("..\\7Mart\\target\\FailureScreenshots"+result.getName()+".png"));
+			String path = System.getProperty("user.dir");
+			FileUtils.copyFile(src,new File(path+"\\target"+result.getName()+".png"));
 			
 			   System.out.println("Successfully captured a screenshot");
 			}catch (Exception e){

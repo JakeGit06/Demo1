@@ -17,7 +17,8 @@ public class reportListners implements ITestListener{
 		}
 	
 	public void onStart(ITestContext iTestContext) {
-		spark = new ExtentSparkReporter("..\\7Mart\\Sparks.html");
+		String path = System.getProperty("user.dir");
+		spark = new ExtentSparkReporter(path+"\\Sparks.html");
 		extent = new ExtentReports();
 		extent.attachReporter(spark);
 		extent.setSystemInfo("Host Name","localhost");

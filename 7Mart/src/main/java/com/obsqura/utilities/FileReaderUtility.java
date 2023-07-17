@@ -8,9 +8,8 @@ import java.util.Properties;
 
 public class FileReaderUtility {
 	private Properties properties;
-	final String propertyFilePath = "../7Mart/src/main/resources/Configuration.properties";
-
-	// System. getProperty("user. dir")
+	String path = System.getProperty("user.dir");
+	final String propertyFilePath=path+"//src//main//resources//Configuration.properties";
 	public FileReaderUtility() {
 		BufferedReader reader;
 		try {
